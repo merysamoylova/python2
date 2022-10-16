@@ -1,0 +1,25 @@
+a = int(input())
+if a.digit():
+    if len(a)!=16:
+        print("ошибка")
+    else:
+        summi=0
+        for i in range(0, len(a), 2):
+            x = int(a[i])
+            if x*2>9:
+                summi=summi+(x*2 - 9)
+            else:
+                summi=summi+x*2
+            summy = 0
+            for j in range(1, len(a), 2):
+                y = int(a[j])
+                summy=summy+y
+            x = summi +summy
+            if x%10==0:
+                print("карта корректна")
+            else:
+                print("карта не корректна")
+else:
+    print("ошибка")
+            
+            
